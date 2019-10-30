@@ -1,7 +1,7 @@
 # Terraform Plan Test Example
 Example for testing `terraform plan` output using not much more than Python and `json.loads()`.
 
-The `test_not_wrong_statefile()` test asserts that your actions aren't solely create and delete. This probably indicates you've pointed your new project at someone else's statefile, causing all resources in the statefile to be deleted. A normal plan will have updates and noops.
+The `test_not_wrong_statefile()` test asserts that your actions aren't solely `create` and `delete`. This probably indicates you've pointed your new project at someone else's statefile, causing all resources in the statefile to be deleted. A normal plan will have `update` and `noop`.
 
 ```bash
 terraform plan -out terraform-plan.tfstate && terraform show -json terraform-plan.tfstate > terraform-plan.json
